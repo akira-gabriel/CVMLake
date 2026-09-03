@@ -7,4 +7,5 @@ CREATE TABLE control.ingestion_log (
     rows_affected INTEGER NOT NULL DEFAULT 0,
     error_message TEXT
 );
+
 CREATE INDEX idx_ingestion_log_run_id ON control.ingestion_log(run_id);
