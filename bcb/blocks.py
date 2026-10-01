@@ -16,6 +16,3 @@ def generate_data_blocks(init_date, finish_date, years_block):
             d_control = time_mark
 
     return l_date
-
-a = generate_data_blocks(date(2023, 10, 25),date(2055, 10, 25), 10)
-print(a)
