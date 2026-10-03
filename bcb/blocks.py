@@ -1,7 +1,7 @@
 from dateutil.relativedelta import relativedelta
 from datetime import date, timedelta
 
-def generate_data_blocks(init_date, finish_date, years_block):
+def generate_date_blocks(init_date, finish_date, years_block):
     l_date = []
     d_control = init_date
 
