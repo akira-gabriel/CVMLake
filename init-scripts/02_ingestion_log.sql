@@ -1,4 +1,4 @@
-CREATE TABLE control.ingestion_log (
+CREATE TABLE IF NOT EXISTS control.ingestion_log(
     id SERIAL PRIMARY KEY,
     run_id UUID NOT NULL CONSTRAINT fk_ingestion_log_run_id REFERENCES control.pipeline_run(id) ON DELETE RESTRICT,
     event_timestamp TIMESTAMPTZ NOT NULL,
@@ -8,4 +8,3 @@ CREATE TABLE control.ingestion_log (
     error_message TEXT
 );
 
-CREATE INDEX idx_ingestion_log_run_id ON control.ingestion_log(run_id);
