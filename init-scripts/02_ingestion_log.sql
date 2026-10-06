@@ -13,3 +13,6 @@ CREATE TABLE IF NOT EXISTS control.ingestion_log(
 
 CREATE INDEX IF NOT EXISTS idx_ingestion_log_marker
     ON control.ingestion_log (dataset, status, period_end);
+
+CREATE INDEX IF NOT EXISTS idx_ingestion_log_run_id
+    ON control.ingestion_log (run_id);

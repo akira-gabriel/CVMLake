@@ -6,4 +6,5 @@ CREATE TABLE bronze.bcb_selic (
     ingestion_log_id INTEGER NOT NULL CONSTRAINT fk_bcb_selic_ingestion_log_id REFERENCES control.ingestion_log(id) ON DELETE RESTRICT
 );
 
-CREATE INDEX idx_ingestion_log_run_id ON bronze.bcb_selic(run_id);
+CREATE INDEX IF NOT EXISTS idx_bcb_selic_ingestion_log_id
+    ON bronze.bcb_selic (ingestion_log_id);
